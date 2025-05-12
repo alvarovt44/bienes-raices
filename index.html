@@ -1,3 +1,143 @@
 <!DOCTYPE html>
-<!-- Este bloque será reemplazado automáticamente por el contenido del documento actual del canvas -->
-<html><head><title>Error</title></head><body><p>Contenido no disponible</p></body></html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienes Raíces Piedras Negras</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #f1f1f1;
+    }
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ffd700;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background: #000;
+      transform: translateX(-250px);
+      transition: transform 0.3s ease;
+      padding: 20px;
+      z-index: 1000;
+    }
+    nav a {
+      display: block;
+      color: #ffd700;
+      text-decoration: none;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1100;
+      background: #ffd700;
+      color: #000;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .menu-open nav {
+      transform: translateX(0);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("toggleMenu").addEventListener("click", function () {
+        document.body.classList.toggle("menu-open");
+      });
+
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.body.classList.remove('menu-open');
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="toggleMenu" class="menu-toggle">☰ Menú</button>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#mision">Misión</a>
+    <a href="#vision">Visión</a>
+    <a href="#terrenos">Terrenos</a>
+    <a href="#ranchos">Ranchos</a>
+    <a href="#casas">Casas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <header id="inicio">
+    <h1>Bienes Raíces Piedras Negras</h1>
+    <p>Una empresa dedicada a ayudar con justicia a quienes compran o venden propiedades en Piedras Negras, Coahuila.</p>
+  </header>
+
+  <section id="mision">
+    <h2>Misión</h2>
+    <p>Ofrecer un servicio justo, honesto y eficiente a quienes desean vender o comprar bienes raíces, buscando siempre el mejor interés para nuestros clientes.</p>
+  </section>
+
+  <section id="vision">
+    <h2>Visión</h2>
+    <p>Ser reconocidos como la empresa de bienes raíces más confiable y transparente en Piedras Negras y la región norte de Coahuila.</p>
+  </section>
+
+  <section id="terrenos">
+    <h2>Terrenos en venta y renta</h2>
+    <p>[Aquí se mostrarán los terrenos disponibles]</p>
+  </section>
+
+  <section id="ranchos">
+    <h2>Ranchos disponibles</h2>
+    <p>[Aquí se mostrarán los ranchos en venta o renta]</p>
+  </section>
+
+  <section id="casas">
+    <h2>Casas en venta y renta</h2>
+    <div style="background:#2e2e2e; padding:20px; border-radius:8px; margin-top:20px;">
+      <h3 style="color:#ffd700;">Departamento en renta - Av. Tecnológico 400</h3>
+      <p><strong>Ubicación:</strong> Piedras Negras, Coahuila</p>
+      <p><strong>Superficie:</strong> 60 m²</p>
+      <p><strong>Precio:</strong> $10,000 MXN mensuales</p>
+      <p><strong>Tipo:</strong> Renta</p>
+      <iframe src="https://www.google.com/maps?q=Avenida+Tecnol%C3%B3gico+400,+Piedras+Negras,+Coahuila&output=embed" width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes contactarnos al correo <a href="mailto:contacto@bienesraicespn.com">contacto@bienesraicespn.com</a> o por WhatsApp al <a href="https://wa.me/528888888888">(888) 888-8888</a>.</p>
+  </section>
+</body>
+</html>
